@@ -1,0 +1,15 @@
+[
+    {
+        "id": 1,
+        "countryname": "Shirts"
+    },{
+        "id": 2,
+        "countryname": "Jeans"
+    },{
+        "id": 3,
+        "countryname": "Shoes"
+    },{
+        "id": 4,
+        "countryname": "Accessories"
+    }
+]

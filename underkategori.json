@@ -1,0 +1,68 @@
+[
+    {
+        "id": 1,
+        "stadname": "Casual shirt",
+        "huvudkategori": 0
+        
+    },{
+        "id": 2,
+        "stadname": "Smart shirt",
+        "huvudkategori": 0
+    },{
+        "id": 3,
+        "stadname": "Polo shirt",
+        "huvudkategori": 0
+    },{
+        "id": 4,
+        "stadname": "Sport shirt",
+        "huvudkategori": 0
+    },{
+        "id": 5,
+        "stadname": "Skinny",
+        "huvudkategori": 1
+    },{
+        "id": 6,
+        "stadname": "Slim",
+        "huvudkategori": 1
+    },{
+        "id": 7,
+        "stadname": "Stright",
+        "huvudkategori": 1
+    },{
+        "id": 8,
+        "stadname": "Boot cut",
+        "huvudkategori": 1
+    },{
+        "id": 9,
+        "stadname": "Casual",
+        "huvudkategori": 2
+    },{
+        "id": 10,
+        "stadname": "Classic",
+        "huvudkategori": 2
+    },{
+        "id": 11,
+        "stadname": "Boot",
+        "huvudkategori": 2
+    },{
+        "id": 12,
+        "stadname": "Sneakers",
+        "huvudkategori": 2
+    },{
+        "id": 13,
+        "stadname": "Belts",
+        "huvudkategori": 3
+    },{
+        "id": 14,
+        "stadname": "Bags",
+        "huvudkategori": 3
+    },{
+        "id": 15,
+        "stadname": "Umbrellas",
+        "huvudkategori": 3
+    },{
+        "id": 15,
+        "stadname": "Gloves",
+        "huvudkategori": 3
+    }
+]
