@@ -74,7 +74,7 @@ $(document).ready(function(){
     function printProduct(){
       for(var i=0;i<allProdukt.length;i++){
          if(localStorage.nykl == allProdukt[i].huvudKat){
-            $(".showProdukt").append('<div class="card" style="width:400px"><h4 class="card-title">'+allProdukt[i].prodName+'</h4><img class="card-img-top" src="'+allProdukt[i].prourl +'" alt="image!" style="width:100%; height:300px;"><a data-pin-do="embedPin" href="https://www.pinterest.com/pin/441141725992933737/"></a><div class="card-body"><p class="card-text"> '+allProdukt[i].prodDesc+'</p></div></div>' );    
+            $(".showProdukt").append('<div class="card" style="width:400px"><h4 class="card-title">'+allProdukt[i].prodName+'</h4><img class="card-img-top" src="'+ allProdukt[i].prourl +'" alt="image!" style="width:80%; height:300px;"><div class="card-body"><p class="card-text"> '+allProdukt[i].prodDesc+'</p></div></div>');    
          }
 
       }
