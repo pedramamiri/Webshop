@@ -2,7 +2,9 @@ $(document).ready(function(){
     console.log("hello world")
     localStorage.nykl;
     localStorage.nykl2;
-    localStorage.nykl3
+    localStorage.nykl3;
+    var utvaldaProdukter =[];
+    localStorage.utvpro;
     // fetch huvud kategori
 
     fetch('huvudkategori.json')
@@ -18,11 +20,12 @@ $(document).ready(function(){
        for(var i=0;i<4;i++){
         $(".hmeny").append('<li class="toKategori" id="'+[i]+'"><a href="produkt.html">'+hKategori[i].countryname+'</a></li>');
     }
-       $(".hmeny").append('<li class="info">KUND VAGN</li>');
+       $(".hmeny").append('<li class="info" id="shop">KUND VAGN</li>');
        $(".hmeny").append('<li class="info">Kontakt</li>');
        $(".hmeny").append('<li class="info">Info</li>');
        openKategori();
-       getNykl();      
+       getNykl();
+       kundvagn();      
        console.log(localStorage.nykl3);
        
     });
@@ -54,7 +57,7 @@ $(document).ready(function(){
 
 
     function openKategori(){
-        $(".toKategori").hover(function(){
+        $(".toKategori").mouseenter(function(){
         $( ".umeny" ).empty();
         var index = Number($(this).attr('id'));
         for (var i=0;i<uKategori.length;i++){
@@ -85,8 +88,8 @@ $(document).ready(function(){
         $(".foto").click(function(){            
             localStorage.nykl3 = Number($(this).attr('id'));
             $( ".showProdukt" ).empty();
-            $(".showProdukt").append('<div class="card" style="width:400px"><h4 class="card-title">'+allProdukt[localStorage.nykl3].prodName+'</h4><img class="card-img-top" src="'+ allProdukt[localStorage.nykl3].prourl +'" alt="image!" style="width:80%; height:300px;"><div class="card-body"><p class="card-text"> '+allProdukt[localStorage.nykl3].prodDesc+'</p><p class="card-text"> '+allProdukt[localStorage.nykl3].prodPrice+" kr "+'</p><a href="#" class="btn btn-primary">Add to card</a></div></div>');
-                        
+            $(".showProdukt").append('<div class="card" style="width:400px"><h4 class="card-title">'+allProdukt[localStorage.nykl3].prodName+'</h4><img class="card-img-top" src="'+ allProdukt[localStorage.nykl3].prourl +'" alt="image!" style="width:80%; height:300px;"><div class="card-body"><p class="card-text"> '+allProdukt[localStorage.nykl3].prodDesc+'</p><p class="card-text"> '+allProdukt[localStorage.nykl3].prodPrice+" kr "+'</p><a href="#" class="btn btn-primary" id="butten">Add to card</a></div></div>');
+            addToCard();                       
         });
     }
     
@@ -117,6 +120,32 @@ $(document).ready(function(){
          
         }  
         getnykl3();  
+    }
+
+    function addToCard(){
+        $("#butten").click(function(){
+            if(localStorage.utvpro == null){
+            utvaldaProdukter.push(localStorage.nykl3);
+            localStorage.utvpro = JSON.stringify(utvaldaProdukter);
+            console.log(localStorage.utvpro);
+            }
+            else{
+                utvaldaProdukter = JSON.parse(localStorage.utvpro);
+                utvaldaProdukter.push(localStorage.nykl3);
+                localStorage.utvpro = JSON.stringify(utvaldaProdukter);
+                console.log(localStorage.utvpro);
+                kundvagn();
+            }
+        });
+
+    }
+
+    function kundvagn(){
+        if( localStorage.utvpro !== null){
+            $("#shop").css("background-color", "red");
+
+        }
+
     }
 
     
