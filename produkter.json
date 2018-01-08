@@ -10,27 +10,36 @@
     },
     {
         "id": 1,
-        "prodName": "Giraffe Polo Shirts",
-        "prodDesc": "Black Friday H2H Mens Fine Cotton Giraffe Polo Shirts of Various Colors NAVY Asia XXXL (JDSK36) from H2H Cyber Monday.",
-        "prodPrice": 699,
-        "prourl":"bild3.jpg",
+        "prodName": "Casual Shirt Men ",
+        "prodDesc": "Casual Shirts for Men Check Shirts Men Short Sleeve.",
+        "prodPrice": 599,
+        "prourl":"bild6.jpg",
         "huvudKat": 0,
-        "underKat": 1
+        "underKat": 0
     },
     {
         "id": 1,
-        "prodName": "Casual ShirtsCollar",
-        "prodDesc": "Turn-down CollarFabric Type: BroadclothModel Number: 7631 Men ShirtSleeve Style: RegularPattern Type: Polka DotClosure Type: Single BreastedStyle: CasualItem Type: ShirtsGender: MenColor: Sky Blue, navy blue, WhiteAsian.",
-        "prodPrice": 699,
-        "prourl":"bild2.jpg",
+        "prodName": "Giraffe Polo Shirts",
+        "prodDesc": "Black Friday H2H Mens Fine Cotton Giraffe Polo Shirts of Various Colors NAVY Asia XXXL (JDSK36) from H2H Cyber Monday.",
+        "prodPrice": 349,
+        "prourl":"bild3.jpg",
         "huvudKat": 0,
         "underKat": 2
     },
     {
         "id": 1,
+        "prodName": "Casual ShirtsCollar",
+        "prodDesc": "Turn-down CollarFabric Type: BroadclothModel Number: 7631 Men ShirtSleeve Style: RegularPattern Type: Polka DotClosure Type: Single BreastedStyle: CasualItem Type: ShirtsGender: MenColor: Sky Blue, navy blue, WhiteAsian.",
+        "prodPrice": 749,
+        "prourl":"bild2.jpg",
+        "huvudKat": 0,
+        "underKat": 1
+    },
+    {
+        "id": 1,
         "prodName": "Sport Shirt Multi",
         "prodDesc": "Pinstripe Fun Shirt from Brooks Brothers.",
-        "prodPrice": 699,
+        "prodPrice": 1249,
         "prourl":"bild4.jpg",
         "huvudKat": 0,
         "underKat": 3
@@ -39,7 +48,7 @@
         "id": 1,
         "prodName": "sport Shirt Men 2016",
         "prodDesc": "Men's Victorinox Swiss Army 'Trent' Tailored Fit Plaid Sport Shirt.",
-        "prodPrice": 699,
+        "prodPrice": 1299,
         "prourl":"bild5.jpg",
         "huvudKat": 0,
         "underKat": 3
@@ -48,7 +57,7 @@
         "id": 1,
         "prodName": "skinny jeans Men 2016",
         "prodDesc": "Selected Homme Skinny Jeans With Repairs.",
-        "prodPrice": 699,
+        "prodPrice": 1499,
         "prourl":"jbild1.jpg",
         "huvudKat": 1,
         "underKat": 4
@@ -57,7 +66,7 @@
         "id": 1,
         "prodName": "slim jeans Men",
         "prodDesc": "30 32 Levi's® 511 SLIM - Jeans Slim Fit - harbour.",
-        "prodPrice": 699,
+        "prodPrice": 1599,
         "prourl":"jbild2.jpg",
         "huvudKat": 1,
         "underKat": 5
@@ -66,7 +75,7 @@
         "id": 1,
         "prodName": " Relaxed Straight Jean ",
         "prodDesc": "liked on Polyvore featuring men's fashion, men's clothing, men's jeans, blue, mens straight jeans, american eagle outfitters mens jeans, men's relaxed fit jeans, mens low rise jeans and mens blue jeans.",
-        "prodPrice": 699,
+        "prodPrice": 899,
         "prourl":"jbild3.jpg",
         "huvudKat": 1,
         "underKat": 6
@@ -75,7 +84,7 @@
         "id": 1,
         "prodName": " boot cut Jean ",
         "prodDesc": "Free Shipping High Quality Men's Winter Plus velvet Boot cut jeans Male Business Casual Wash Black Flares Pants Denim Trousers.",
-        "prodPrice": 699,
+        "prodPrice": 799,
         "prourl":"jbild4.jpg",
         "huvudKat": 1,
         "underKat": 7
@@ -84,7 +93,7 @@
         "id": 1,
         "prodName": " casual  ",
         "prodDesc": "It's official, spring is here! It is time to start thinking about putting away the heavy winter duds and breaking into something new, fresh and boldly.",
-        "prodPrice": 699,
+        "prodPrice": 1299,
         "prourl":"shbild1.jpg",
         "huvudKat": 2,
         "underKat": 8
@@ -93,7 +102,7 @@
         "id": 1,
         "prodName": " Crockett & Jones ",
         "prodDesc": "Westbourne Chestnut Calf, Oxford Shoe | Crockett & Jones.",
-        "prodPrice": 699,
+        "prodPrice": 2999,
         "prourl":"shbild2.jpg",
         "huvudKat": 2,
         "underKat": 9
@@ -102,7 +111,7 @@
         "id": 1,
         "prodName": " Botas Militar para ",
         "prodDesc": "Mal wieder stylische Schuhe kaufen.",
-        "prodPrice": 699,
+        "prodPrice": 2999,
         "prourl":"shbild3.jpg",
         "huvudKat": 2,
         "underKat": 10
@@ -111,7 +120,7 @@
         "id": 1,
         "prodName": " Nike ",
         "prodDesc": "Artfully crafted sneakers for real life. Handmade in Italy.",
-        "prodPrice": 699,
+        "prodPrice": 899,
         "prourl":"shbild4.jpg",
         "huvudKat": 2,
         "underKat": 11
@@ -120,7 +129,7 @@
         "id": 1,
         "prodName": " Belts Belt  ",
         "prodDesc": "Luxury belt for male genuine leather Belts designer belt for men high.",
-        "prodPrice": 699,
+        "prodPrice": 799,
         "prourl":"bebild1.jpg",
         "huvudKat": 3,
         "underKat": 12
@@ -129,7 +138,7 @@
         "id": 1,
         "prodName": " Bag  ",
         "prodDesc": "Briefcases - Bags - MEN - Coach Factory Official Site.",
-        "prodPrice": 699,
+        "prodPrice": 3459,
         "prourl":"bebild2.jpg",
         "huvudKat": 3,
         "underKat": 13
@@ -138,18 +147,18 @@
         "id": 1,
         "prodName": " Gloves ",
         "prodDesc": "These look like they would feel magical. -andre .",
-        "prodPrice": 699,
+        "prodPrice": 899,
         "prourl":"bebild4.jpg",
         "huvudKat": 3,
-        "underKat": 14
+        "underKat": 15
     },
     {
         "id": 1,
         "prodName": " Crown Coast Travel Umbrella ",
         "prodDesc": " Windproof Lightweight for Men Women and Kids, Compact Travel Umbrellas in Multiple Colors  .",
-        "prodPrice": 699,
+        "prodPrice": 399,
         "prourl":"bebild3.jpg",
         "huvudKat": 3,
-        "underKat": 15
+        "underKat": 14
     }
 ]

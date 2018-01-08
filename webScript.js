@@ -2,6 +2,7 @@ $(document).ready(function(){
     console.log("hello world")
     localStorage.nykl;
     localStorage.nykl2;
+    localStorage.nykl3
     // fetch huvud kategori
 
     fetch('huvudkategori.json')
@@ -11,8 +12,7 @@ $(document).ready(function(){
     })
     .then(function(json)
     {
-        hKategori = json;
-       console.log(hKategori[0].countryname);
+       hKategori = json;      
        $(".hmeny").append('<li class="logo"><a href="index.html">Arad Butik</a></li>');
        
        for(var i=0;i<4;i++){
@@ -23,8 +23,7 @@ $(document).ready(function(){
        $(".hmeny").append('<li class="info">Info</li>');
        openKategori();
        getNykl();      
-       console.log(localStorage.nykl2);
-       console.log(localStorage.nykl);
+       console.log(localStorage.nykl3);
        
     });
 
@@ -38,6 +37,8 @@ $(document).ready(function(){
     {
         uKategori = json;  
     });
+
+
 
     fetch('produkter.json')
     .then(function(response)
@@ -79,6 +80,15 @@ $(document).ready(function(){
             localStorage.nykl = 86;            
         });
     }
+
+    function getnykl3(){
+        $(".foto").click(function(){            
+            localStorage.nykl3 = Number($(this).attr('id'));
+            $( ".showProdukt" ).empty();
+            $(".showProdukt").append('<div class="card" style="width:400px"><h4 class="card-title">'+allProdukt[localStorage.nykl3].prodName+'</h4><img class="card-img-top" src="'+ allProdukt[localStorage.nykl3].prourl +'" alt="image!" style="width:80%; height:300px;"><div class="card-body"><p class="card-text"> '+allProdukt[localStorage.nykl3].prodDesc+'</p><p class="card-text"> '+allProdukt[localStorage.nykl3].prodPrice+" kr "+'</p><a href="#" class="btn btn-primary">Add to card</a></div></div>');
+                        
+        });
+    }
     
     
 
@@ -92,7 +102,7 @@ $(document).ready(function(){
         if(localStorage.nykl == 86){
             for(var i=0;i<allProdukt.length;i++){
              if(localStorage.nykl2 == allProdukt[i].underKat){
-               $(".showProdukt").append('<div class="card" style="width:400px"><h4 class="card-title">'+allProdukt[i].prodName+'</h4><img class="card-img-top" src="'+ allProdukt[i].prourl +'" alt="image!" style="width:80%; height:300px;"><div class="card-body"><p class="card-text"> '+allProdukt[i].prodDesc+'</p></div></div>');    
+               $(".showProdukt").append('<div class="card" style="width:400px"><h4 class="card-title">'+allProdukt[i].prodName+'</h4><a class="foto" href="#" id="'+[i]+'"><img class="card-img-top" src="'+ allProdukt[i].prourl +'" alt="image!" style="width:80%; height:300px;"></a></div>');    
                }
 
             }
@@ -100,13 +110,20 @@ $(document).ready(function(){
     else{
             for(var i=0;i<allProdukt.length;i++){
                if(localStorage.nykl == allProdukt[i].huvudKat){
-               $(".showProdukt").append('<div class="card" style="width:400px"><h4 class="card-title">'+allProdukt[i].prodName+'</h4><img class="card-img-top" src="'+ allProdukt[i].prourl +'" alt="image!" style="width:80%; height:300px;"><div class="card-body"><p class="card-text"> '+allProdukt[i].prodDesc+'</p></div></div>');    
+               $(".showProdukt").append('<div class="card" style="width:400px"><h4 class="card-title">'+allProdukt[i].prodName+'</h4><a class="foto" href="#" id="'+[i]+'"><img class="card-img-top" src="'+ allProdukt[i].prourl +'" alt="image!" style="width:80%; height:300px;"></a></div>');    
                }
    
             }
          
-        }    
+        }  
+        getnykl3();  
     }
+
+    
+
+   
+
+
     
     
     
