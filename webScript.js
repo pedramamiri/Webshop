@@ -153,7 +153,7 @@ $(document).ready(function(){
 
     function kundvagn(){
         if( localStorage.utvpro !== null){
-            $("#shop").css("background-color", "red");
+            $("#shop").css("background-color", "#f42525");
 
         }
     }
