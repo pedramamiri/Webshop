@@ -19,21 +19,21 @@
     },
     {
         "id": 1,
-        "prodName": "Giraffe Polo Shirts",
-        "prodDesc": "Black Friday H2H Mens Fine Cotton Giraffe Polo Shirts of Various Colors NAVY Asia XXXL (JDSK36) from H2H Cyber Monday.",
-        "prodPrice": 349,
-        "prourl":"bild3.jpg",
-        "huvudKat": 0,
-        "underKat": 2
-    },
-    {
-        "id": 1,
         "prodName": "Casual ShirtsCollar",
         "prodDesc": "Turn-down CollarFabric Type: BroadclothModel Number: 7631 Men ShirtSleeve Style: RegularPattern Type: Polka DotClosure Type: Single BreastedStyle: CasualItem Type: ShirtsGender: MenColor: Sky Blue, navy blue, WhiteAsian.",
-        "prodPrice": 749,
+        "prodPrice": 349,
         "prourl":"bild2.jpg",
         "huvudKat": 0,
         "underKat": 1
+    },
+    {
+        "id": 1,
+        "prodName": "Giraffe Polo Shirts",
+        "prodDesc": "Black Friday H2H Mens Fine Cotton Giraffe Polo Shirts of Various Colors NAVY Asia XXXL (JDSK36) from H2H Cyber Monday.",
+        "prodPrice": 749,
+        "prourl":"bild3.jpg",
+        "huvudKat": 0,
+        "underKat": 2
     },
     {
         "id": 1,
@@ -145,20 +145,20 @@
     },
     {
         "id": 1,
-        "prodName": " Gloves ",
-        "prodDesc": "These look like they would feel magical. -andre .",
+        "prodName": "Crown Coast Travel Umbrella  ",
+        "prodDesc": " Windproof Lightweight for Men Women and Kids, Compact Travel Umbrellas in Multiple Colors  ..",
         "prodPrice": 899,
-        "prourl":"bebild4.jpg",
-        "huvudKat": 3,
-        "underKat": 15
-    },
-    {
-        "id": 1,
-        "prodName": " Crown Coast Travel Umbrella ",
-        "prodDesc": " Windproof Lightweight for Men Women and Kids, Compact Travel Umbrellas in Multiple Colors  .",
-        "prodPrice": 399,
         "prourl":"bebild3.jpg",
         "huvudKat": 3,
         "underKat": 14
+    },
+    {
+        "id": 1,
+        "prodName": " Gloves ",
+        "prodDesc": "These look like they would feel magical. -andre ",
+        "prodPrice": 399,
+        "prourl":"bebild4.jpg",
+        "huvudKat": 3,
+        "underKat": 15
     }
 ]
