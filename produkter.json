@@ -10,7 +10,7 @@
     },
     {
         "id": 1,
-        "prodName": "Casual Shirt Men ",
+        "prodName": "Casual Shirt Man ",
         "prodDesc": "Casual Shirts for Men Check Shirts Men Short Sleeve.",
         "prodPrice": 599,
         "prourl":"bild6.jpg",
@@ -19,10 +19,55 @@
     },
     {
         "id": 1,
-        "prodName": "Casual ShirtsCollar",
+        "prodName": "Casual collor Shirt ",
+        "prodDesc": "Henley and mandarin collar designed casual shirts for men. 100% cotton linen fabric tops with roll-up long sleeves. Slim fit buttoned shirts.",
+        "prodPrice": 399,
+        "prourl":"bild13.jpg",
+        "huvudKat": 0,
+        "underKat": 0
+    },
+    {
+        "id": 1,
+        "prodName": "Casual jeans Shirt ",
+        "prodDesc": "Encontrar Más Camisas Casuales Información acerca de Camisa de los hombres 2016.",
+        "prodPrice": 799,
+        "prourl":"bild14.jpg",
+        "huvudKat": 0,
+        "underKat": 0
+    },
+    {
+        "id": 1,
+        "prodName": "Smart ShirtsCollar",
         "prodDesc": "Turn-down CollarFabric Type: BroadclothModel Number: 7631 Men ShirtSleeve Style: RegularPattern Type: Polka DotClosure Type: Single BreastedStyle: CasualItem Type: ShirtsGender: MenColor: Sky Blue, navy blue, WhiteAsian.",
         "prodPrice": 349,
         "prourl":"bild2.jpg",
+        "huvudKat": 0,
+        "underKat": 1
+    },
+    {
+        "id": 1,
+        "prodName": "Smart Shirts",
+        "prodDesc": "Classic Color Block Slimming Shirt Collar Long Sleeves Shirt For Men.",
+        "prodPrice": 449,
+        "prourl":"bild10.jpg",
+        "huvudKat": 0,
+        "underKat": 1
+    },
+    {
+        "id": 1,
+        "prodName": "Fashion smart Shirts",
+        "prodDesc": "Modish Slimming Shirt Collar Color Block Vertical Stripe Splicing Long Sleeve Polyester Shirt For Men.",
+        "prodPrice": 449,
+        "prourl":"bild11.jpg",
+        "huvudKat": 0,
+        "underKat": 1
+    },
+    {
+        "id": 1,
+        "prodName": " New trend smart Shirts",
+        "prodDesc": "Trendy Shirt Collar Color Block Splicing Slimming Long Sleeve Cotton Blend Shirt For Men.",
+        "prodPrice": 499,
+        "prourl":"bild12.jpg",
         "huvudKat": 0,
         "underKat": 1
     },
@@ -37,12 +82,40 @@
     },
     {
         "id": 1,
+        "prodName": "Boss Polo Shirts",
+        "prodDesc": "Slim-fit printed piqué polo shirt with S.Café® Dark Blue from BOSS Green for Men .",
+        "prodPrice": 1245,
+        "prourl":"bild7.jpg",
+        "huvudKat": 0,
+        "underKat": 2
+    },
+    {
+        "id": 1,
+        "prodName": "Polo shirt",
+        "prodDesc": "Moncler Gamme Bleu Zipped Polo Shirt .",
+        "prodPrice": 699,
+        "prourl":"bild9.jpg",
+        "huvudKat": 0,
+        "underKat": 2
+    },
+
+    {
+        "id": 1,
         "prodName": "Sport Shirt Multi",
         "prodDesc": "Pinstripe Fun Shirt from Brooks Brothers.",
         "prodPrice": 1249,
         "prourl":"bild4.jpg",
         "huvudKat": 0,
         "underKat": 3
+    },
+    {
+        "id": 1,
+        "prodName": "Lacoste ",
+        "prodDesc": "ClassicLacoste Pique Stretch Polo.",
+        "prodPrice": 899,
+        "prourl":"bild8.jpg",
+        "huvudKat": 0,
+        "underKat": 2
     },
     {
         "id": 1,
@@ -55,10 +128,37 @@
     },
     {
         "id": 1,
+        "prodName": "sport Shirt Men ",
+        "prodDesc": "Slim fit cotton Sport color Shirt.",
+        "prodPrice": 849,
+        "prourl":"bild15.jpg",
+        "huvudKat": 0,
+        "underKat": 3
+    },
+    {
+        "id": 1,
+        "prodName": "sport cotton Shirt Men ",
+        "prodDesc": "Our Whale of a Sale is on! Enjoy an additional 40% off of this classic men's shirt for a limited time!.",
+        "prodPrice": 899,
+        "prourl":"bild16.jpg",
+        "huvudKat": 0,
+        "underKat": 3
+    },
+    {
+        "id": 1,
         "prodName": "skinny jeans Men 2016",
         "prodDesc": "Selected Homme Skinny Jeans With Repairs.",
         "prodPrice": 1499,
         "prourl":"jbild1.jpg",
+        "huvudKat": 1,
+        "underKat": 4
+    },
+    {
+        "id": 1,
+        "prodName": "Boohoo skinny jeans ",
+        "prodDesc": "Boohoo Dark Washed Indigo Stretch Skinny Fit Jeans.",
+        "prodPrice": 1499,
+        "prourl":"jbild12.jpg",
         "huvudKat": 1,
         "underKat": 4
     },
