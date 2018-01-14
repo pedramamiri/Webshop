@@ -153,7 +153,7 @@ $(document).ready(function(){
 
     function kundvagn(){
         if( localStorage.utvpro !== null){
-            $("#shop").css("background-color", "#f42525");
+            $("#shop").css("background-color", "#ffbc00");
 
         }
     }
@@ -162,6 +162,7 @@ $(document).ready(function(){
 
          
       $("#shop").click(function(){
+        x=55  
         $( ".showProdukt" ).empty();
         $(".utvpro").empty();
         $(".showProdukt").append('<h1 style="color:black; margin-bottom:30px;">VARUKORG</h1> ');
@@ -173,8 +174,9 @@ $(document).ready(function(){
                     
                 }
                 $(".utvpro").append('<div class="frakt"><h4>Frakt</h4><h4>55 kr</h4></div>');
-                $(".utvpro").append('<hr class="style3" style="border-width: 3px;"/>');
-                $(".utvpro").append('<div class="samma"><h4>TOTALSUMMA(inkl. moms)</h4><h4>'+x+" "+"kr"+'</h4>')               
+               // $(".utvpro").append('<hr class="style3" style="border-width: 3px;"/>');
+                $(".utvpro").append('<div class="samma"><h4>TOTALSUMMA(inkl. moms)</h4><h4>'+x+" "+"kr"+'</h4>')
+                $(".inlogning").css("display","inline");               
                 close();
         });
     }
