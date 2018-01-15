@@ -5,6 +5,8 @@ $(document).ready(function(){
     localStorage.nykl3;
     var utvaldaProdukter =[];
     localStorage.utvpro;
+    sessionStorage.kundName;
+    
     var x=55; 
     sessionStorage.remo;
     
@@ -31,6 +33,7 @@ $(document).ready(function(){
        openKategori();
        getNykl();
        toBuy();
+       kundvagn();
        console.log(localStorage.utvpro);     
        console.log(localStorage.nykl3);
        
@@ -138,6 +141,7 @@ $(document).ready(function(){
             utvaldaProdukter.push(localStorage.nykl3);
             localStorage.utvpro = JSON.stringify(utvaldaProdukter);
             console.log(localStorage.utvpro);
+            kundvagn();
             }
             else{
                 utvaldaProdukter = JSON.parse(localStorage.utvpro);
@@ -152,11 +156,21 @@ $(document).ready(function(){
     }
 
     function kundvagn(){
-        if( localStorage.utvpro !== null){
-            $("#shop").css("background-color", "#ffbc00");
-
+        if( localStorage.utvpro == undefined ){
+            $("#shop").css("color", "white");
+            }
+            else {
+            utvaldaProdukter = JSON.parse(localStorage.utvpro);
+            if (utvaldaProdukter.length == 0){
+                $("#shop").css("color", "white");
+            }
+            else{               
+                $("#shop").css("color", "#ffbc00");  
+            }
         }
     }
+    
+
 
       function toBuy(){
 
@@ -164,8 +178,9 @@ $(document).ready(function(){
       $("#shop").click(function(){
         x=55  
         $( ".showProdukt" ).empty();
-        $(".utvpro").empty();
+        $(".utvpro").empty();              
         $(".showProdukt").append('<h1 style="color:black; margin-bottom:30px;">VARUKORG</h1> ');
+        if(localStorage.utvpro !== undefined){
         utvaldaProdukter = JSON.parse(localStorage.utvpro);
         console.log(utvaldaProdukter);
         for(var i=0;i<utvaldaProdukter.length;i++){           
@@ -173,10 +188,26 @@ $(document).ready(function(){
                     x=x+Number(allProdukt[utvaldaProdukter[i]].prodPrice);
                     
                 }
+            }
                 $(".utvpro").append('<div class="frakt"><h4>Frakt</h4><h4>55 kr</h4></div>');
-               // $(".utvpro").append('<hr class="style3" style="border-width: 3px;"/>');
                 $(".utvpro").append('<div class="samma"><h4>TOTALSUMMA(inkl. moms)</h4><h4>'+x+" "+"kr"+'</h4>')
-                $(".inlogning").css("display","inline");               
+                $(".inlogning").css("display","inline");
+                if(sessionStorage.kundName == undefined || sessionStorage.kundName == 0){
+                    $(".welcome").empty();
+                    $(".welcome").append('Please enter username and password');
+
+                }
+                else{
+                    $(".welcome").empty();
+                    $(".logout").css("display","inline");
+                    $(".welcome").append('Hello '+sessionStorage.kundName +', you are allready logged in')  
+                }
+               if(x>55){
+                    
+                   $(".utvpro").append('<div class="tobuy"><input class="buy" type="button" value="click here to buy"  /></div>')
+                } 
+               
+                tobuy();
                 close();
         });
     }
@@ -198,16 +229,113 @@ $(document).ready(function(){
                  sessionStorage.remo = 90
                  console.log(sessionStorage.remo );
                  }
+                 
                 }
             $(".samma").empty();
+            $(".tobuy").empty();
+
             for(var i=0;i<utvaldaProdukter.length;i++){           
             x=x+Number(allProdukt[utvaldaProdukter[i]].prodPrice);                 
             }
             $(".utvpro").append('<div class="samma"><h4>TOTALSUMMA(inkl. moms)</h4><h4>'+x+" "+"kr"+'</h4>')
-
-               localStorage.utvpro = JSON.stringify(utvaldaProdukter);          
+            
+               localStorage.utvpro = JSON.stringify(utvaldaProdukter);
+               kundvagn();
+               if(x>55){
+                
+               $(".utvpro").append('<div class="tobuy"><input class="buy" type="button" value="click here to buy"  /></div>')
+            } 
+            tobuy();
+                      
          });
+
       }
+      var kunder =[
+        {
+            "id": 1,
+            "name": "janne",
+            "email": "janne@hiveandfive.se",
+            "password": "12345"
+        },{
+            "id": 2,
+            "name":"test",
+            "email": "test",
+            "password": "password"
+        }
+    ]
+    $(".login").click(function(){
+        nvalue = $(".usename").val();
+        pasvalue =$(".passvalue").val();
+        var key = 0;
+        for(var i=0;i<kunder.length;i++){
+            if( key == 0){
+           if(nvalue == kunder[i].email && pasvalue == kunder[i].password){
+            $(".welcome").empty();   
+            sessionStorage.kundName = kunder[i].name;
+            console.log(sessionStorage.kundName);
+            $(".welcome").append('Hello '+sessionStorage.kundName +', you are logged in')
+            $(".logout").css("display","inline");
+            key = 1;     
+           }
+           else {
+            $(".welcome").empty();
+            $(".welcome").append('Please enter correct username and password');
+           }
+
+        }
+    }        
+    });
+
+    $(".logout").click(function(){
+        $(".welcome").empty();
+        sessionStorage.kundName = 0;
+        $(".welcome").append('Please enter username and password');
+        console.log("yes");
+    });
+
+   /* var kund ={
+        "name":"test",
+        "email": "test",
+        "password": "password"
+
+    }*/
+
+
+
+    function tobuy(){
+    $(".buy").click(function(){
+        if(sessionStorage.kundName == undefined || sessionStorage.kundName == 0){
+            $(".utvpro").empty();
+            $( ".showProdukt" ).empty(); 
+            $(".inlogning").css("display","none");
+            //$(".logout").css("display","none");            
+            $(".showProdukt").append('<h1 style="color:black; margin-bottom:30px;">VARUKORG</h1><br> ');
+            $(".utvpro").append('<h1 style="color:black; margin-bottom:30px;">Thanks for shopping </h1> ');
+            window.localStorage.clear();
+            localStorage.clear();
+            kundvagn();
+
+     }
+     else{
+        $(".utvpro").empty();
+        $( ".showProdukt" ).empty(); 
+        $(".inlogning").css("display","none");            
+        $(".showProdukt").append('<h1 style="color:black; margin-bottom:30px;">VARUKORG</h1><br> ');
+        $(".utvpro").append('<h1 style="color:black; margin-bottom:30px;">Thanks'+" "+ sessionStorage.kundName +' for shopping  </h1> ');
+        window.localStorage.clear();
+        localStorage.clear();
+        kundvagn();
+
+     }
+    });
+}
+    
+
+      
+    
+
+
+
 
 
 

@@ -70,6 +70,8 @@ a{
     color:black;
     cursor: none;
     margin-top: 10px;
+   
+    
 }
 .card{
     margin-left: 40px;
@@ -96,6 +98,10 @@ a{
     border-bottom: 2px dashed #8c8b8b;
     margin-bottom: 4px;
      
+}
+#shop{
+    margin: 0;
+    bottom: 0;
 }
 .samma{
     display: flex;
@@ -145,7 +151,7 @@ hr.style3 {
     color: #4E4D4B;
     font-weight: bold;
     cursor: pointer;
-    width: 100%;
+    width: 25%;
     border-radius: 5px;
     padding: 10px 0;
     outline:none;
@@ -158,14 +164,41 @@ hr.style3 {
     color: #4E4D4B;
     font-weight: bold;
     cursor: pointer;
-    width: 100%;
     border-radius: 5px;
     padding: 10px 0;
     outline:none;
     margin: 5px;
-
-
+    width: 25%;
 } 
+.logout{
+    font-size: 16px;
+    background: linear-gradient(#5863ff 5%, #0099ff 100%);
+    border: 1px solid #4c00ff ;
+    color: #4E4D4B;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 5px;
+    padding: 10px 0;
+    outline:none;
+    margin: 5px;
+    width: 22%;
+    margin-left:28%;
+    display: none; 
+}
+.buy{
+    font-size: 16px;
+    background: linear-gradient(#ffbc00 5%, #ffdd7f 100%);
+    border: 1px solid #ffbb00;
+    color: #4E4D4B;
+    font-weight: bold;
+    cursor: pointer;
+    width: 50%;
+    border-radius: 5px;
+    padding: 10px 0;
+    outline:none;
+    margin: 18px;
+   /* display: none;*/
+    }
 .signup:hover{
     background: linear-gradient(#ffb27f 5%, #ff5100 100%);
 }   
@@ -173,6 +206,13 @@ hr.style3 {
 .login:hover{
     background: linear-gradient(#ffdd7f 5%, #ffbc00 100%);
     }
+.logout:hover{
+    background: linear-gradient(#0099ff 5%, #5863ff 100%);
+}
+.buy:hover{
+    background: linear-gradient(#ffdd7f 5%, #ffbc00 100%);
+    }
+
 input[type=text],input[type=password]{
     width: 100%;
     height: 40px;
@@ -200,5 +240,12 @@ label{
 .input{
     display: flex;
     flex-direction: row;
+    
+    
+}
+.welcome{
+    margin-bottom: 10px;
+}
+.logout{
     
 }       
