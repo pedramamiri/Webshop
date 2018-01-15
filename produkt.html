@@ -5,6 +5,7 @@
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
         <meta charset="UTF-8">            
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
         <link rel="stylesheet" href="Webstyle.css">
         
     </head>
@@ -22,12 +23,17 @@
             <div class="inlogning">
                     <h4 class="welcome" ></h4>
                    <form id="form_id" method="post" name="myform">
+                            <label class="name">Name :</label>
+                            <input id="name" class="name" type="text" />
+                            <label class="surname">Surname :</label>
+                            <input id="surname" class="surname" type="text" />
                             <label>User Name :</label>
                             <input class="usename" type="text" />
                             <label>Password :</label>
                             <input class="passvalue" type="password" />
                             <div class="input">
                             <input class="login" type="button" value="Login" />
+                            <input class="submit" type="button" value="Submit" />
                             <input class="signup" type="button" value="Sign up"  />
                             <input class="logout" type="button" value="logout"  />
                             </div>

@@ -5,7 +5,9 @@ $(document).ready(function(){
     localStorage.nykl3;
     var utvaldaProdukter =[];
     localStorage.utvpro;
-    sessionStorage.kundName;
+    localStorage.kundName;
+    localStorage.kundlist;
+    console.log(localStorage.kundName);
     
     var x=55; 
     sessionStorage.remo;
@@ -192,15 +194,23 @@ $(document).ready(function(){
                 $(".utvpro").append('<div class="frakt"><h4>Frakt</h4><h4>55 kr</h4></div>');
                 $(".utvpro").append('<div class="samma"><h4>TOTALSUMMA(inkl. moms)</h4><h4>'+x+" "+"kr"+'</h4>')
                 $(".inlogning").css("display","inline");
-                if(sessionStorage.kundName == undefined || sessionStorage.kundName == 0){
+                $(".name").css("display","none");
+                $(".surname").css("display","none");
+                $(".submit").css("display","none");
+                $(".login").css("display","inline");
+                $(".signup").css("display","inline");
+                if(localStorage.kundName == undefined || localStorage.kundName == 0){
                     $(".welcome").empty();
+                    $(".logout").css("display","none");
                     $(".welcome").append('Please enter username and password');
 
                 }
                 else{
                     $(".welcome").empty();
+                    $(".login").css("display","none");
+                    $(".signup").css("display","none");
                     $(".logout").css("display","inline");
-                    $(".welcome").append('Hello '+sessionStorage.kundName +', you are allready logged in')  
+                    $(".welcome").append('Hello '+localStorage.kundName +', you are allready logged in')  
                 }
                if(x>55){
                     
@@ -252,29 +262,41 @@ $(document).ready(function(){
       }
       var kunder =[
         {
-            "id": 1,
+            
             "name": "janne",
-            "email": "janne@hiveandfive.se",
+            "surname" : "janne",
+            "usename": "janne@hiveandfive.se",
             "password": "12345"
         },{
-            "id": 2,
+    
             "name":"test",
-            "email": "test",
+            "surname":"test",
+            "usename": "test",
             "password": "password"
+        },
+        {
+            
+            "name":"admin",
+            "usename": "admin",
+            "password": "12345"
         }
+
     ]
     $(".login").click(function(){
         nvalue = $(".usename").val();
         pasvalue =$(".passvalue").val();
         var key = 0;
+        if ( localStorage.kundlist == undefined){            
         for(var i=0;i<kunder.length;i++){
             if( key == 0){
-           if(nvalue == kunder[i].email && pasvalue == kunder[i].password){
+           if(nvalue == kunder[i].usename && pasvalue == kunder[i].password){
             $(".welcome").empty();   
-            sessionStorage.kundName = kunder[i].name;
-            console.log(sessionStorage.kundName);
-            $(".welcome").append('Hello '+sessionStorage.kundName +', you are logged in')
+            localStorage.kundName = kunder[i].name;
+            console.log(localStorage.kundName);
+            $(".welcome").append('Hello '+localStorage.kundName +', you are logged in')
             $(".logout").css("display","inline");
+            $(".signup").css("display","none");
+            $(".login").css("display","none");
             key = 1;     
            }
            else {
@@ -283,36 +305,59 @@ $(document).ready(function(){
            }
 
         }
-    }        
+        }
+        }else{
+            kunder = JSON.parse(localStorage.kundlist);
+            for(var i=0;i<kunder.length;i++){
+                if( key == 0){
+               if(nvalue == kunder[i].usename && pasvalue == kunder[i].password){
+                $(".welcome").empty();   
+                localStorage.kundName = kunder[i].name;
+                console.log(localStorage.kundName);
+                $(".welcome").append('Hello '+localStorage.kundName +', you are logged in')
+                $(".logout").css("display","inline");
+                $(".signup").css("display","none");
+                $(".login").css("display","none");
+                key = 1;     
+               }
+               else {
+                $(".welcome").empty();
+                $(".welcome").append('Please enter correct username and password');
+               }
+    
+            }
+            }
+        }
+
+
     });
 
     $(".logout").click(function(){
         $(".welcome").empty();
-        sessionStorage.kundName = 0;
+        localStorage.kundName = 0;
         $(".welcome").append('Please enter username and password');
         console.log("yes");
+        $(".logout").css("display","none");
+        $(".signup").css("display","inline");
+        $(".login").css("display","inline");
+        
+        //sessionStorage.clear();
     });
-
-   /* var kund ={
-        "name":"test",
-        "email": "test",
-        "password": "password"
-
-    }*/
-
-
 
     function tobuy(){
     $(".buy").click(function(){
-        if(sessionStorage.kundName == undefined || sessionStorage.kundName == 0){
+        if(localStorage.kundName == undefined || localStorage.kundName == 0){
             $(".utvpro").empty();
             $( ".showProdukt" ).empty(); 
             $(".inlogning").css("display","none");
             //$(".logout").css("display","none");            
             $(".showProdukt").append('<h1 style="color:black; margin-bottom:30px;">VARUKORG</h1><br> ');
             $(".utvpro").append('<h1 style="color:black; margin-bottom:30px;">Thanks for shopping </h1> ');
-            window.localStorage.clear();
-            localStorage.clear();
+           // window.localStorage.clear();
+           // localStorage.clear();
+          // sessionStorage.clear();
+           utvaldaProdukter = [];
+           localStorage.utvpro = JSON.stringify(utvaldaProdukter);
             kundvagn();
 
      }
@@ -321,14 +366,77 @@ $(document).ready(function(){
         $( ".showProdukt" ).empty(); 
         $(".inlogning").css("display","none");            
         $(".showProdukt").append('<h1 style="color:black; margin-bottom:30px;">VARUKORG</h1><br> ');
-        $(".utvpro").append('<h1 style="color:black; margin-bottom:30px;">Thanks'+" "+ sessionStorage.kundName +' for shopping  </h1> ');
-        window.localStorage.clear();
-        localStorage.clear();
+        $(".utvpro").append('<h1 style="color:black; margin-bottom:30px;">Thanks'+" "+ localStorage.kundName +' for your shopping  </h1> ');
+       // window.localStorage.clear();
+        //sessionStorage.clear();
+        utvaldaProdukter = [];
+        localStorage.utvpro = JSON.stringify(utvaldaProdukter);
         kundvagn();
 
      }
     });
 }
+    
+    $(".signup").click(function(){
+        $(".welcome").empty();
+        $(".welcome").append('Please enter your information');
+        $(".name").css("display","inline");
+        $(".surname").css("display","inline");
+        $(".submit").css("display","inline");
+        $(".login").css("display","none");
+        $(".signup").css("display","none");
+        $(".logout").css("display","none");
+        
+
+    });
+    $(".submit").click(function(){
+        $(".welcome").empty();
+        $(".welcome").append('Please enter your information');
+        var name = $("#name").val();
+        var surname = $("#surname").val();
+        var username = $(".usename").val();
+        var pass = $(".passvalue").val();
+        if( !$("#name").val() || !$("#surname").val() || !$(".usename").val() || !$(".passvalue").val()  ){
+            $(".welcome").append(' <div class="alert alert-info alert-dismissable fade in"><a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a><strong>Ooops!</strong> Please fill all of boxes.</div> ');
+        
+        }else{
+            var kund ={
+                
+                        "name":name,
+                        "surname":surname,
+                        "usename": username,
+                        "password": pass
+                    }
+                    if(localStorage.kundlist == undefined){
+                        kunder.push(kund);                        
+                        localStorage.kundlist = JSON.stringify(kunder);
+                        console.log(localStorage.kundlist);
+                    }else{
+                        kunder = JSON.parse(localStorage.kundlist);
+                        kunder.push(kund);
+                        localStorage.kundlist = JSON.stringify(kunder);
+                        console.log(localStorage.kundlist);
+
+
+                    }
+                    $(".welcome").empty();
+                    $(".welcome").append('Please enter username and password');
+                    $(".name").css("display","none");
+                    $(".surname").css("display","none");
+                    $(".submit").css("display","none");
+                    $(".login").css("display","inline");
+                    $(".signup").css("display","inline");
+                    $(".logout").css("display","none");
+
+              
+        }
+
+        
+        
+    
+    });
+
+
     
 
       
