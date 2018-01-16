@@ -80,12 +80,12 @@ a{
     margin-bottom: 20px;    
 }
 .utvpro{
-    height: 600px;
     width: 40%; 
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
     padding: 10px;
+    margin-bottom: 50px;
     
 }
 .shovaror{
@@ -311,7 +311,7 @@ label{
         flex-direction: column;
     }
     .utvpro{
-        height: auto;
+        
         width: 100%;
     }
     .inlogning{
