@@ -29,8 +29,8 @@ $(document).ready(function(){
         $(".hmeny").append('<li class="toKategori" id="'+[i]+'"><a href="produkt.html">'+hKategori[i].countryname+'</a></li>');
     }
        $(".vagn").append('<li class="fa fa-shopping-cart" style="font-size:24px;  float: right;" id="shop" ></li>');
-       $(".hmeny").append('<li class="info" id="info2">Kontakt</li>');
-       $(".hmeny").append('<li class="info" id="info2">Info</li>');
+       $(".hmeny").append('<li class="info" id="info2"><a href="shop.html">Kontakt</a></li>');
+       $(".hmeny").append('<li class="info" id="info2"><a href="shop.html">Info</a></li>');
        
        openKategori();
        getNykl();

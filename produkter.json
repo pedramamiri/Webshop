@@ -164,10 +164,55 @@
     },
     {
         "id": 1,
+        "prodName": "skinny jeans ",
+        "prodDesc": "ASOS Extreme Super Skinny Jeans at ASOS.",
+        "prodPrice": 899,
+        "prourl":"jbild13.jpg",
+        "huvudKat": 1,
+        "underKat": 4
+    },
+    {
+        "id": 1,
+        "prodName": " Spray skinny jeans ",
+        "prodDesc": "boohoo Spray On Skinny Jeans.",
+        "prodPrice": 799,
+        "prourl":"jbild14.jpg",
+        "huvudKat": 1,
+        "underKat": 4
+    },
+    {
+        "id": 1,
         "prodName": "slim jeans Men",
         "prodDesc": "30 32 Levi's® 511 SLIM - Jeans Slim Fit - harbour.",
         "prodPrice": 1599,
         "prourl":"jbild2.jpg",
+        "huvudKat": 1,
+        "underKat": 5
+    },
+    {
+        "id": 1,
+        "prodName": "slim jeans",
+        "prodDesc": "Business Stylish Casual Straight Leg Denim Slim Jeans for Men.",
+        "prodPrice": 1399,
+        "prourl":"jbild22.jpg",
+        "huvudKat": 1,
+        "underKat": 5
+    },
+    {
+        "id": 1,
+        "prodName": " ZARA slim jeans",
+        "prodDesc": "ZARA - MAN - SLIM JEANS.",
+        "prodPrice": 699,
+        "prourl":"jbild23.jpg",
+        "huvudKat": 1,
+        "underKat": 5
+    },
+    {
+        "id": 1,
+        "prodName": " Tiger slim jeans",
+        "prodDesc": "SLIM JEANS Tiger Of Sweden.",
+        "prodPrice": 1299,
+        "prourl":"jbild24.jpg",
         "huvudKat": 1,
         "underKat": 5
     },
@@ -182,10 +227,64 @@
     },
     {
         "id": 1,
+        "prodName": " Iconoclast Men's Regular Fit Straight Jeans ",
+        "prodDesc": "liked on Polyvore featuring men's fashion, men's clothing, men's jeans, blue, mens straight jeans, american eagle outfitters mens jeans, men's relaxed fit jeans, mens low rise jeans and mens blue jeans.",
+        "prodPrice": 849,
+        "prourl":"jbild32.jpg",
+        "huvudKat": 1,
+        "underKat": 6
+    },
+    {
+        "id": 1,
+        "prodName": " Straight Jeans ",
+        "prodDesc": " Brave Star Selvage 14oz Slim Straights. 8 months wear 1 ozone (waterless) wash.",
+        "prodPrice": 549,
+        "prourl":"jbild33.jpg",
+        "huvudKat": 1,
+        "underKat": 6
+    },
+    {
+        "id": 1,
+        "prodName": " Straight Jeans ",
+        "prodDesc": " Brave Star Selvage 14oz Slim Straights. 8 months wear 1 ozone (waterless) wash.",
+        "prodPrice": 649,
+        "prourl":"jbild34.jpg",
+        "huvudKat": 1,
+        "underKat": 6
+    },   
+    {
+        "id": 1,
         "prodName": " boot cut Jean ",
         "prodDesc": "Free Shipping High Quality Men's Winter Plus velvet Boot cut jeans Male Business Casual Wash Black Flares Pants Denim Trousers.",
         "prodPrice": 799,
         "prourl":"jbild4.jpg",
+        "huvudKat": 1,
+        "underKat": 7
+    },
+    {
+        "id": 1,
+        "prodName": " Slim Fit Boot Cut Jeans ",
+        "prodDesc": "Rock & Roll Cowboy® Medium Stonewash Stitched V Pocket Pistol Slim Fit Boot Cut Jeans MOP674343 | Cavender's.",
+        "prodPrice": 1299,
+        "prourl":"jbild42.jpg",
+        "huvudKat": 1,
+        "underKat": 7
+    },
+    {
+        "id": 1,
+        "prodName": " Slim Fit Boot Cut Jeans ",
+        "prodDesc": "Rock & Roll Cowboy® Medium Stonewash Stitched V Pocket Pistol Slim Fit Boot Cut Jeans MOP674343 | Cavender's.",
+        "prodPrice": 1299,
+        "prourl":"jbild42.jpg",
+        "huvudKat": 1,
+        "underKat": 7
+    },
+    {
+        "id": 1,
+        "prodName": " Slim Fit Boot Cut Jeans ",
+        "prodDesc": "Rock & Roll Cowboy® Medium Stonewash Stitched V Pocket Pistol Slim Fit Boot Cut Jeans MOP674343 | Cavender's.",
+        "prodPrice": 1299,
+        "prourl":"jbild42.jpg",
         "huvudKat": 1,
         "underKat": 7
     },
@@ -254,10 +353,55 @@
     },
     {
         "id": 1,
+        "prodName": "Kingsman Umbrella  ",
+        "prodDesc": " Kingsman Swaine Adeney Brigg Chestnut Wood-Handle Umbrella .",
+        "prodPrice": 899,
+        "prourl":"bebild32.jpg",
+        "huvudKat": 3,
+        "underKat": 14
+    },
+    {
+        "id": 1,
+        "prodName": "Kingsman Umbrella  ",
+        "prodDesc": " Kingsman Swaine Adeney Brigg Chestnut Wood-Handle Umbrella .",
+        "prodPrice": 899,
+        "prourl":"bebild33.jpg",
+        "huvudKat": 3,
+        "underKat": 14
+    },
+    {
+        "id": 1,
         "prodName": " Gloves ",
         "prodDesc": "These look like they would feel magical. -andre ",
         "prodPrice": 399,
         "prourl":"bebild4.jpg",
+        "huvudKat": 3,
+        "underKat": 15
+    },
+    {
+        "id": 1,
+        "prodName": " Gloves ",
+        "prodDesc": "These look like they would feel magical. -andre ",
+        "prodPrice": 899,
+        "prourl":"bebild42.jpg",
+        "huvudKat": 3,
+        "underKat": 15
+    },
+    {
+        "id": 1,
+        "prodName": " Gloves ",
+        "prodDesc": "Aspinal Leather Fingerless Driving Gloves in Brown Deerskin with hand stitched detail are handmade ",
+        "prodPrice": 899,
+        "prourl":"bebild43.jpg",
+        "huvudKat": 3,
+        "underKat": 15
+    },
+    {
+        "id": 1,
+        "prodName": " Gloves ",
+        "prodDesc": "Bonitos guantes",
+        "prodPrice": 899,
+        "prourl":"bebild44.jpg",
         "huvudKat": 3,
         "underKat": 15
     }
