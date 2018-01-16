@@ -28,9 +28,9 @@ $(document).ready(function(){
        for(var i=0;i<4;i++){
         $(".hmeny").append('<li class="toKategori" id="'+[i]+'"><a href="produkt.html">'+hKategori[i].countryname+'</a></li>');
     }
-       $(".hmeny").append('<li class="info" id="shop" >KUND VAGN</li>');
-       $(".hmeny").append('<li class="info">Kontakt</li>');
-       $(".hmeny").append('<li class="info">Info</li>');
+       $(".vagn").append('<li class="fa fa-shopping-cart" style="font-size:24px;  float: right;" id="shop" ></li>');
+       $(".hmeny").append('<li class="info" id="info2">Kontakt</li>');
+       $(".hmeny").append('<li class="info" id="info2">Info</li>');
        
        openKategori();
        getNykl();
@@ -85,7 +85,7 @@ $(document).ready(function(){
     function getNykl(){
         $(".toKategori").click(function(){
             localStorage.nykl = Number($(this).attr('id'));
-                                  
+                               
         }); 
     }
     
@@ -93,7 +93,8 @@ $(document).ready(function(){
     function getnykl2(){
         $(".tnKategori").click(function(){
             localStorage.nykl2 = Number($(this).attr('id'));
-            localStorage.nykl = 86;            
+            localStorage.nykl = 86;
+                        
         });
     }
 
@@ -124,7 +125,7 @@ $(document).ready(function(){
 
             }
         }  
-    else{
+    else{          
             for(var i=0;i<allProdukt.length;i++){
                if(localStorage.nykl == allProdukt[i].huvudKat){
                $(".showProdukt").append('<div class="card" style="width:400px"><h4 class="card-title">'+allProdukt[i].prodName+'</h4><a class="foto" href="#" id="'+[i]+'"><img class="card-img-top" src="'+ allProdukt[i].prourl +'" alt="image!" style="width:80%; height:300px;"></a></div>');    
@@ -132,7 +133,8 @@ $(document).ready(function(){
    
             }
          
-        }  
+        }
+            
         getnykl3(); 
         
     }
@@ -178,8 +180,10 @@ $(document).ready(function(){
 
          
       $("#shop").click(function(){
+        $(".test").css("display","flex");  
         x=55  
         $( ".showProdukt" ).empty();
+        $(".adminsida").empty();
         $(".utvpro").empty();              
         $(".showProdukt").append('<h1 style="color:black; margin-bottom:30px;">VARUKORG</h1> ');
         if(localStorage.utvpro !== undefined){
@@ -205,18 +209,28 @@ $(document).ready(function(){
                     $(".welcome").append('Please enter username and password');
 
                 }
+                else if (localStorage.kundName == "admin"){
+                    $(".welcome").empty();
+                    $(".adminsida").empty();
+                    $(".login").css("display","none");
+                    $(".signup").css("display","none");
+                    $(".logout").css("display","inline");
+                    $(".adminsida").append('<input class="admins" type="button" value="View admin page"  />');
+                    $(".welcome").append('Hello '+localStorage.kundName +', you are allready logged in');  
+                }
                 else{
                     $(".welcome").empty();
                     $(".login").css("display","none");
                     $(".signup").css("display","none");
                     $(".logout").css("display","inline");
-                    $(".welcome").append('Hello '+localStorage.kundName +', you are allready logged in')  
+                    $(".welcome").append('Hello '+localStorage.kundName +', you are allready logged in'); 
+
                 }
                if(x>55){
                     
                    $(".utvpro").append('<div class="tobuy"><input class="buy" type="button" value="click here to buy"  /></div>')
                 } 
-               
+                viweads();
                 tobuy();
                 close();
         });
@@ -278,7 +292,7 @@ $(document).ready(function(){
             
             "name":"admin",
             "usename": "admin",
-            "password": "12345"
+            "password": "admin"
         }
 
     ]
@@ -289,7 +303,20 @@ $(document).ready(function(){
         if ( localStorage.kundlist == undefined){            
         for(var i=0;i<kunder.length;i++){
             if( key == 0){
-           if(nvalue == kunder[i].usename && pasvalue == kunder[i].password){
+             if(nvalue == "admin" && pasvalue == "admin" ){
+                 console.log("admin");
+                 key = 1;
+                 localStorage.kundName = "admin";
+                 $(".welcome").empty();
+                 $(".adminsida").empty();
+                 $(".welcome").append('Hello admin, you are logged in')
+                 $(".logout").css("display","inline");
+                 $(".signup").css("display","none");
+                 $(".login").css("display","none");
+                 $(".adminsida").append('<input class="admins" type="button" value="View admin page"  />');
+
+             }   
+           else if(nvalue == kunder[i].usename && pasvalue == kunder[i].password){
             $(".welcome").empty();   
             localStorage.kundName = kunder[i].name;
             console.log(localStorage.kundName);
@@ -310,7 +337,20 @@ $(document).ready(function(){
             kunder = JSON.parse(localStorage.kundlist);
             for(var i=0;i<kunder.length;i++){
                 if( key == 0){
-               if(nvalue == kunder[i].usename && pasvalue == kunder[i].password){
+                    if(nvalue == "admin" && pasvalue == "admin" ){
+                        console.log("admin");
+                        key = 1;
+                        localStorage.kundName = "admin";
+                        $(".welcome").empty();
+                        $(".adminsida").empty();
+                        $(".welcome").append('Hello admin, you are logged in')
+                        $(".logout").css("display","inline");
+                        $(".signup").css("display","none");
+                        $(".login").css("display","none");
+                        $(".adminsida").append('<input class="admins" type="button" value="View admin page"  />');
+
+                    }   
+               else if(nvalue == kunder[i].usename && pasvalue == kunder[i].password){
                 $(".welcome").empty();   
                 localStorage.kundName = kunder[i].name;
                 console.log(localStorage.kundName);
@@ -328,18 +368,47 @@ $(document).ready(function(){
             }
             }
         }
+        viweads();
 
 
     });
 
     $(".logout").click(function(){
-        $(".welcome").empty();
-        localStorage.kundName = 0;
+        $(".welcome").empty();       
         $(".welcome").append('Please enter username and password');
         console.log("yes");
         $(".logout").css("display","none");
         $(".signup").css("display","inline");
         $(".login").css("display","inline");
+        $(".adminsida").empty();
+        
+        if ( localStorage.kundName == "admin"){
+            $(".utvpro").empty();
+            $( ".showProdukt" ).empty();
+            x = 55;
+        if(localStorage.utvpro !== undefined){
+            utvaldaProdukter = JSON.parse(localStorage.utvpro);
+            console.log(utvaldaProdukter);
+            for(var i=0;i<utvaldaProdukter.length;i++){           
+                        $(".utvpro").append('<div  class="shovaror" ><button type="button" class="close" id="'+utvaldaProdukter[i]+'">x</button><img  src="'+ allProdukt[utvaldaProdukter[i]].prourl +'" alt="image!" style="width:60px; height:60px;"><h4 style="color:black;  ">'+allProdukt[utvaldaProdukter[i]].prodName+" "+" -"+allProdukt[utvaldaProdukter[i]].prodPrice+"kr"+'</h4></div>');
+                        x=x+Number(allProdukt[utvaldaProdukter[i]].prodPrice);
+                        
+                    }
+                }
+                    $(".showProdukt").append('<h1 style="color:black; margin-bottom:30px;">VARUKORG</h1><br> ');
+                    $(".utvpro").append('<div class="frakt"><h4>Frakt</h4><h4>55 kr</h4></div>');
+                    $(".utvpro").append('<div class="samma"><h4>TOTALSUMMA(inkl. moms)</h4><h4>'+x+" "+"kr"+'</h4>')
+                    if(x>55){
+                        
+                       $(".utvpro").append('<div class="tobuy"><input class="buy" type="button" value="click here to buy"  /></div>')
+                    } 
+
+                    tobuy();
+                    close();
+        }
+        localStorage.kundName = 0;
+
+
         
         //sessionStorage.clear();
     });
@@ -426,15 +495,38 @@ $(document).ready(function(){
                     $(".submit").css("display","none");
                     $(".login").css("display","inline");
                     $(".signup").css("display","inline");
-                    $(".logout").css("display","none");
-
-              
+                    $(".logout").css("display","none");            
         }
-
-        
-        
-    
     });
+
+
+    function viweads(){
+        $(".admins").click(function(){
+            console.log("hello admin");
+            $(".showProdukt").empty();
+            $(".utvpro").empty();
+            $(".showProdukt").append('<h1 style="color:black; margin-bottom:30px;">Admin page (customer list) </h1><br> ');
+            if (localStorage.kundlist == undefined){
+                for (var i=0;i<kunder.length;i++){
+                    $(".utvpro").append('<div><h4>Customer '+[i+1]+'</h4><p style="color:black;">'+kunder[i].name +" "+kunder[i].surname +" "+kunder[i].usename +" "+kunder[i].password +' </div>')
+                    
+                }
+
+            }else{
+            kunder = JSON.parse(localStorage.kundlist);
+            console.log(kunder);
+            for (var i=0;i<kunder.length;i++){
+                $(".utvpro").append('<div><h4>Customer '+[i+1]+'</h4><p style="color:black;">'+kunder[i].name +" "+kunder[i].surname +" "+kunder[i].usename +" "+kunder[i].password +' </div>')
+                
+            }
+            }
+
+
+
+
+
+        });
+        }
 
 
     
